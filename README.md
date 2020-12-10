@@ -1,3 +1,50 @@
+# JSON-SERVER
+{
+  "pirates": [
+    {
+      "id": 1,
+      "name": "Blackbeard",
+      "role_id": 1,
+      "role": "Captain"
+    },
+    {
+      "id": 2,
+      "name": "Bluebeard",
+      "role_id": 2,
+      "role": "Landlubber"
+    },
+    {
+      "id": 3,
+      "name": "Bach",
+      "role_id": 3,
+      "role": "Pen-Spinner"
+    },
+    {
+      "name": "graybeard",
+      "role": "landlubber",
+      "id": 4
+    },
+    {
+      "name": "graybeard",
+      "role": "landlubber",
+      "id": 5
+    },
+    {
+      "name": "green beard",
+      "role": "Quartermaster",
+      "id": 6
+    },
+    {
+      "name": "greenbeard",
+      "role": "Quartermaster",
+      "id": 7
+    }
+  ]
+}
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
