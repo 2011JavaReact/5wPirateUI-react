@@ -1,6 +1,15 @@
 import React from 'react';
 
+// When we created our react project using create-react-app, we essentially installed these
+// 1. Webpack
+// 2. Babel
+// 3. dev server
 export default class HomePage extends React.Component {
+
+   // Does the same thing as useEffect(() => {}, [])
+   componentDidMount() {
+   }
+
    render() {
       return (
          <div id="showcase">
