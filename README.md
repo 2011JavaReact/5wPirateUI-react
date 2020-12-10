@@ -1,4 +1,5 @@
 # JSON-SERVER
+```json
 {
   "pirates": [
     {
@@ -41,7 +42,7 @@
     }
   ]
 }
-
+```
 
 
 
