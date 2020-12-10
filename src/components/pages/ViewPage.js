@@ -43,7 +43,7 @@ const ViewPage = () => {
             <tbody id="pirate-table-data">
                 {
                     pirates.map(pirate=> 
-                        (<Pirate pirate={pirate} />)
+                        (<Pirate pirate={pirate} key={pirate.id}/>)
                     )
                 }
             </tbody>
