@@ -4,12 +4,14 @@ import HomePage from './components/pages/HomePage';
 import ViewPage from './components/pages/ViewPage';
 import { AddPage } from './components/pages/AddPage';
 import Footer from './components/Footer';
+import NavBar from './components/NavBar';
 
 function App() {
 
   return (
     <>
     <Router>
+      <NavBar/>
       <Switch>
         <Route exact path="/" component={HomePage}/>
         <Route exact path="/view-pirates" component={ViewPage}/> 

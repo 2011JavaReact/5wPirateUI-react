@@ -74,7 +74,7 @@ the margin or padding of inline elements directly, so we change a to a block typ
   padding: 20px;
 }
 
-#navbar ul li a:hover, #navbar ul li a.current {
+#navbar ul li a:hover, #navbar ul li a.selected{
   background: #444;
   color: #f7c08a;
 }
