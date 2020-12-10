@@ -3,10 +3,12 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import HomePage from './components/pages/HomePage';
 import ViewPage from './components/pages/ViewPage';
 import { AddPage } from './components/pages/AddPage';
+import Footer from './components/Footer';
 
 function App() {
 
   return (
+    <>
     <Router>
       <Switch>
         <Route exact path="/" component={HomePage}/>
@@ -15,6 +17,9 @@ function App() {
         <Route path="/" render={()=> <div>404 NOT FOUND :)</div>}/>   
       </Switch>
     </Router>
+    <Footer />
+    </>
+    
   );
 }
 
