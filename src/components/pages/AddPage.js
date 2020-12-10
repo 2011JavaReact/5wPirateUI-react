@@ -1,14 +1,16 @@
 import Axios from 'axios';
-import React from "react";
-import {useState} from "react";
+import React, {useState} from "react";
 
 const AddPage = () =>{
 
-    const [formData, setFormdata] = useState({});
+    const [formData, setFormdata] = useState({
+        name: '',
+        role: 'Landlubber'
+    });
 
     const insertPirate = async (e) => {
         e.preventDefault();
-        const response = await Axios.post('http://localhost:3000/pirates', formData);
+        const response = await Axios.post('http://localhost:3001/pirates', formData);
         console.log(response);
     }
 
@@ -40,6 +42,6 @@ const AddPage = () =>{
         </div>
         </section>
     )
- }
+}
 
- export {AddPage} 
+export {AddPage}
