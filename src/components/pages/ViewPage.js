@@ -6,7 +6,7 @@ import Pirate from '../Pirate'
 const ViewPage = () => {
     const [pirates, setPirates] = useState([]);
     const getPirates = async () => {
-        const response = await Axios.get('http://localhost:3000/pirates');
+        const response = await Axios.get('http://localhost:3001/pirates');
 
         setPirates(response.data);
     }
