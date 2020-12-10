@@ -1,14 +1,17 @@
 import Axios from 'axios';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import Pirate from '../Pirate'
 
 // Functional component 
 const ViewPage = () => {
-
+    const [pirates, setPirates] = useState([]);
     const getPirates = async () => {
-        const response = await Axios.get('http://localhost:8080/PirateServer/pirate');
+        const response = await Axios.get('http://localhost:3000/pirates');
 
-        console.log(response);
+        setPirates(response.data);
     }
+
+
 
     // UseEffect is what is known as a hook
     // useEffect takes advantage of the component lifecycle,
@@ -38,12 +41,11 @@ const ViewPage = () => {
                 </tr>
             </thead>
             <tbody id="pirate-table-data">
-                <tr>
-                    <td>1</td>
-                    <td>Blackbeard</td>
-                    <td>1</td>
-                    <td>Captain</td>
-                </tr>
+                {
+                    pirates.map(pirate=> 
+                        (<Pirate pirate={pirate} key={pirate.id}/>)
+                    )
+                }
             </tbody>
         </table>
         </section>
