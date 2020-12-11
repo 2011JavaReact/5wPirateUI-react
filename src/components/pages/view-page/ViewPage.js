@@ -1,6 +1,6 @@
 import Axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import Pirate from '../Pirate'
+import PirateTable from './PirateTable';
 
 // Functional component 
 const ViewPage = () => {
@@ -9,6 +9,10 @@ const ViewPage = () => {
         const response = await Axios.get('http://localhost:3000/pirates');
 
         setPirates(response.data);
+    }
+
+    const refreshPirates = () =>{
+        getPirates();
     }
 
 
@@ -29,26 +33,7 @@ const ViewPage = () => {
     }, [])
 
     return (
-        <section id="pirate-list-main">
-        <h1>Pirate List</h1>
-        <table className="table">
-            <thead className="thead-dark">
-                <tr>
-                    <th>Pirate ID</th>
-                    <th>Pirate Name</th>
-                    <th>Role ID</th>
-                    <th>Role Name</th>
-                </tr>
-            </thead>
-            <tbody id="pirate-table-data">
-                {
-                    pirates.map(pirate=> 
-                        (<Pirate pirate={pirate} key={pirate.id}/>)
-                    )
-                }
-            </tbody>
-        </table>
-        </section>
+        <PirateTable pirates={pirates} refreshPirates={refreshPirates}/>
     );
 }
 

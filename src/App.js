@@ -1,7 +1,7 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import HomePage from './components/pages/HomePage';
-import ViewPage from './components/pages/ViewPage';
+import ViewPage from './components/pages/view-page/ViewPage';
 import { AddPage } from './components/pages/AddPage';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
