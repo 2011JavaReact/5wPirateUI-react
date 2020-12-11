@@ -19,6 +19,9 @@ const NavBar = () => {
             <li>
             <NavLink exact to='/add' activeClassName='selected'>Add Pirate</NavLink>
             </li>
+            <li>
+            <NavLink exact to='/login' activeClassName='selected'>Login</NavLink>
+            </li>
           </ul>
         </div>
       </nav>

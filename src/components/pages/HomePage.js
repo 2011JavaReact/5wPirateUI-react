@@ -5,7 +5,6 @@ import React from 'react';
 // 2. Babel
 // 3. dev server
 export default class HomePage extends React.Component {
-
    // Does the same thing as useEffect(() => {}, [])
    componentDidMount() {
    }
