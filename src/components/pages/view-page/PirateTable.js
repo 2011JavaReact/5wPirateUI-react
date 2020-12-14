@@ -1,9 +1,12 @@
 import React from 'react';
-import Pirate from './Pirate'
+import Pirate from './Pirate';
+import { useSelector } from "react-redux";
 const PirateTable = ({pirates, refreshPirates})=>{
+    const user = useSelector(store=>store);
     return (
         <section id="pirate-list-main">
-        <h1>Pirate List</h1>
+            
+    <h1>{user.name}'s Pirate List</h1>
         <button onClick={refreshPirates}>Refresh</button>
         <table className="table">
             <thead className="thead-dark">
